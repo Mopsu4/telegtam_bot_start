@@ -1,0 +1,14 @@
+[Unit]
+Description=Telegram Bot
+After=network.target
+
+[Service]
+User=root
+Group=root
+
+WorkingDirectory= home/telegtam_bot_start
+Environment= "PYTHONPATH=/home/telegtam_bot_start"
+ExecStart=/home/telegtam_bot_start/.venv/bin/python /home/telegtam_bot_start/TAXIQ.py
+
+[Install]
+WantedBy=multi-user.target
